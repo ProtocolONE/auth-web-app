@@ -41,11 +41,12 @@ spec:
         image: {{ $deployment.image }}:{{ $deployment.imageTag }}
         ports:
         - containerPort: {{$deployment.port}}
-        #livenessProbe:
-        #  httpGet:
-        #    path: /health
-        #    port: {{ $deployment.healthPort }}
-        #  initialDelaySeconds: 15
-        #  timeoutSeconds: 1
-        #  failureThreshold: 3
-        #  periodSeconds: 5
+        livenessProbe:
+          httpGet:
+            path: /
+            #port: {{ $deployment.healthPort }}
+            port: {{ $deployment.Port }}
+          initialDelaySeconds: 15
+          timeoutSeconds: 1
+          failureThreshold: 3
+          periodSeconds: 5
