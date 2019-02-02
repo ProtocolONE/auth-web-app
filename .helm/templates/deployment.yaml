@@ -40,7 +40,7 @@ spec:
       - name: {{ $deployment.name }}
         image: {{ $deployment.image }}:{{ $deployment.imageTag }}
         ports:
-        - containerPort: {{$deployment.port}}
+        - containerPort: {{ $deployment.port }}
         livenessProbe:
           httpGet:
             path: /
