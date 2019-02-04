@@ -17,7 +17,7 @@ export default {
   mounted() {
     this.authForm = new P1AuthWebSdk({
         clientID: '5c221cde5ffa56fdd05257df',
-        redirectUri: 'https://authapp.tst.protocol.one/success/'
+        redirectUri: 'https://authapp.tst.protocol.one/success/?check=true'
         // language: 'en',
       })
     this.authForm.on('tokenReceived', (value) => {
