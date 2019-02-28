@@ -10,9 +10,9 @@ ingress:
 certIssuer:
   email: admin@protocol.one
 
-frontend:
+backend:
   name: node
-  role: frontend
+  role: backend
   image: "p1hub/p1authapp"
   imageTag: latest
   port: 3000
